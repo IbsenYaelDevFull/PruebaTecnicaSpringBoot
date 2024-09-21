@@ -31,6 +31,7 @@ public class PruebaService implements PruebaServiceInt {
 
 	@Override
 	public ResponseEntity<ResponseModel> createTask(Task task) {
+		task.setCompleted(false);
 		if (pruebaDao.PersistTask(task) == 0)
 			return Utils.responseError("No se ha podido crear la tarea");
 

@@ -27,11 +27,11 @@ public class PruebaDao {
 	public int PersistTask(Task task) {
 		int insert = 0;
 		try {
-			Boolean taskValidate = taskRepository.existsById(task.getId());
-			if (!taskValidate) {
+			
+			
 				taskRepository.save(task);
 				insert = 1;
-			}
+			
 
 			return insert;
 		} catch (Exception e) {
